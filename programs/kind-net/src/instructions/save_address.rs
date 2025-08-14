@@ -6,7 +6,7 @@ pub struct SaveAddress<'info> {
     #[account(
         init, 
         payer = signer, 
-        space = 8 + 32 + 32,
+        space = 8 + AddressData::INIT_SPACE,
         seeds = [b"user_address", signer.key().as_ref()],
         bump
     )]
@@ -18,9 +18,8 @@ pub struct SaveAddress<'info> {
     pub system_program: Program<'info, System>,
 }
 
-pub fn save_address(ctx: Context<SaveAddress>, address: Pubkey) -> Result<()> {
+pub fn save_address(ctx: Context<SaveAddress>) -> Result<()> {
     let address_data = &mut ctx.accounts.address_data;
     address_data.owner = ctx.accounts.signer.key();
-    address_data.captured_address = address;
     Ok(())
 }

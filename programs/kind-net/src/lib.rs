@@ -13,7 +13,7 @@ use instructions::*;
 pub mod kind_net {
     use super::*;
 
-    pub fn save_addrs(ctx: Context<SaveAddress>, address: Pubkey) -> Result<()> {
-        save_address(ctx, address)
+    pub fn save_addrs(ctx: Context<SaveAddress>) -> Result<()> {
+        save_address(ctx)
     }
 }
