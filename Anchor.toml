@@ -6,7 +6,7 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-kind_net = "86m15bvPNjBHaB9v4zv7Y3tWcb7NuCvohCPmwLVgezmB"
+kind_net = "2pee52VCJhdyAhPdRbdWY3HHmTizv5f533SttsaniB4f"
 
 [registry]
 url = "https://api.apr.dev"
