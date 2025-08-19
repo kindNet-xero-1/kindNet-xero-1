@@ -1,4 +1,6 @@
 //* Main File
+#![allow(unexpected_cfgs)]
+
 use anchor_lang::prelude::*;
 
 //TODO: Default program id - must be changed when deployed to mainnet
